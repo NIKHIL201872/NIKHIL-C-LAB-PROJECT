@@ -1,0 +1,144 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#define stop "ENTER THE VALID OPERATOR"
+void ADDITION();
+void SUBTRACTION();
+void MULTIPLICATION();
+void DIVISION();
+void MODULUS();
+void SQUARE();
+void CUBE();
+void POWER();
+void SQUAREROOT();
+int FACTORIAL();
+int Funtion(int ,int ,char );
+int main()
+{
+printf("\t\t SCIENTIFIC CALCULATOR\n\n");
+int OPERATION;
+printf("ENTER 1 FOR ADDITION\n");
+printf("ENTER 2 FOR SUBTRACTION\n");
+printf("ENTER 3 FOR MULTIPLICATION\n ");
+printf("ENTER 4 FOR DIVISION\n ");
+printf("ENTER 5 FOR MODULUS\n");
+printf("ENTER 6 FOR FACTORIAL\n");
+printf("ENTER 7 FOR POWER\n");
+printf("ENTER 8 FOR SQUARE\n ");
+printf("ENTER 9 FOR CUBE\n");
+printf("ENTER 10 FOR SQUAREROOT\n");
+printf("\n**ENTER 0 FOR EXIT**\n");
+while (1)
+{
+printf("\n\n CHOOSE THE OPERATION:");
+scanf("%d",&OPERATION);
+switch (OPERATION)
+{
+case 1:
+ADDITION();
+break;
+case 2:
+SUBTRACTION();
+break;
+case 3:
+MULTIPLICATION();
+break;
+case 4:
+DIVISION();
+break;
+case 5:
+MODULUS();
+break;
+case 6:
+FACTORIAL();
+break;
+case 7:
+POWER();
+break;
+case 8:
+SQUARE();
+break;
+case 9:
+CUBE();
+break;
+case 10:
+SQUAREROOT();
+break;
+case 0:
+exit(0);
+break;
+default:
+printf("\n******%s******\n",stop);
+}
+}
+return 0;
+}
+void ADDITION(){
+printf("ENTER THE NUMBERS FOR ADDITION : ");
+int a,b;
+scanf("%d%d",&a,&b);
+printf("THE SUM OF %d AND %d  IS %d\n",a,b,a+b);
+}
+void SUBTRACTION(){
+printf("ENTER THE NUMBERS FOR SUBTRACTION :");
+int a,b;
+scanf("%d%d",&a,&b);
+printf("THE DIFFERENCE OF %d AND %d IS %d\n",a,b,a-b);
+}
+void MULTIPLICATION(){
+printf("ENTER THE NUMBERS FOR MULTIPLICATION :");
+int a,b;
+scanf("%d%d",&a,&b);
+printf("THE PRODUCT OF %d AND %d IS %d\n",a,b,a*b);
+}
+void DIVISION(){
+printf("ENTER THE NUMBER FOR DIVISION: ");
+float a,b;
+scanf("%f%f", &a,&b);
+printf("THE RESULT OF %d DIVIDED BY %d IS %f\n",a,b,a/b);
+}
+void MODULUS(){
+printf("ENTER THE NUMBERS FOR MODULUS :");
+int a,b;
+scanf("%d%d",&a,&b);
+printf("THE REMAINDER OF %d DIVIDED BY %d IS %d\n",a,b,a%b);
+}
+int FACTORIAL(){
+printf("ENTER THE NUMBER WHOSE FACTORIAL IS TO BE FOUND : ");
+int n;
+scanf("%d",&n);
+int factorial =1;
+for(int i=1;i<=n;i++){
+factorial=factorial*i;
+}
+printf("\nFACTORIAL OF %d IS %d",n,FACTORIAL);
+}
+void POWER(){
+double b;
+double p;
+printf("ENTER BASE VALUE AND POWER VALUE: ");
+scanf("%lf%lf",&b,&p);
+double e= pow(b,p);
+printf("THE RESULT IS %lf",e);
+}
+void SQUARE(){
+double b;
+printf("ENTER THE NUMBER FOR SQUARING: ");
+scanf("%lf",&b);
+double p=pow(b,2);
+printf("THE SQUARE OF %lf IS %lf",b,p);
+}
+void CUBE(){
+double b;
+printf("ENTER THE NUMBER FOR CUBING: ");
+scanf("%lf",&b);
+double p=pow(b,3);
+printf("THE CUBE OF %lf IS %lf",b,p);
+}
+void SQUAREROOT(){
+double b;
+printf("ENTER THE NUMBER WHOSE SQUARE ROOT IS TO BE FOUND: ");
+scanf("%lf",&b);
+double p=sqrt(b);
+printf("THE SQUAREROOT OF %lf IS %lf",b,p);
+}
